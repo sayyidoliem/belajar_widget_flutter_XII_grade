@@ -21,14 +21,8 @@ class PH1 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text(
-                'Sayyid Muhamamad',
-                style: TextStyle(fontSize: 24),
-              ),
-              Text(
-                'XII RPL',
-                style: TextStyle(fontSize: 24),
-              ),
+              Text('Sayyid Muhamamad', style: TextStyle(fontSize: 24),),
+              Text('XII RPL',style: TextStyle(fontSize: 24),),
             ],
           ),
           Row(
@@ -49,18 +43,9 @@ class PH1 extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             mainAxisSize: MainAxisSize.max,
             children: [
-              Text(
-                'Contact Person',
-                style: TextStyle(fontSize: 24),
-              ),
-              Text(
-                '012345678',
-                style: TextStyle(fontSize: 24),
-              ),
-              Text(
-                'Tangerang Kota',
-                style: TextStyle(fontSize: 24),
-              )
+              Text('Contact Person',style: TextStyle(fontSize: 24),),
+              Text('012345678',style: TextStyle(fontSize: 24),),
+              Text('Tangerang Kota',style: TextStyle(fontSize: 24),)
             ],
           )
         ],

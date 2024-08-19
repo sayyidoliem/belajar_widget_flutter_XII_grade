@@ -1,3 +1,4 @@
+import 'package:belajar_widget/pages/login_page.dart';
 import 'package:belajar_widget/widgets/exercise_1.dart';
 import 'package:belajar_widget/widgets/ph_1.dart';
 import 'package:belajar_widget/widgets/sample_container.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PH1(),
+      home: const LoginPage(),
     );
   }
 }
@@ -52,6 +53,51 @@ class MyHomePage extends StatelessWidget {
         title: const Text('Ini text dari AppBar'),
       ),
       body: const SampleContainer(),
+    );
+  }
+}
+
+class FirstRoute extends StatelessWidget {
+  const FirstRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('First Route'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SecondRoute()),
+              );
+            },
+            child: const Text('Open Route')),
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  const SecondRoute({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Second Route'),
+        automaticallyImplyLeading: false,
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Go back'),
+        ),
+      ),
     );
   }
 }
